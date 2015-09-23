@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="926.65057"
+   height="456.50806"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="arduino_compile_process.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL"
+       style="overflow:visible">
+      <path
+         id="path3965"
+         d="M 5.77,0 -2.88,5 -2.88,-5 5.77,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="scale(0.8,0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3826"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         id="path3844"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 C 6.97309,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="505.91264"
+     inkscape:cy="310.15179"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     height="500px"
+     inkscape:window-width="1366"
+     inkscape:window-height="668"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-22.489942,-575.19371)">
+    <g
+       id="g4844"
+       transform="translate(0,-1.7547607e-4)">
+      <rect
+         ry="32.863998"
+         y="575.96228"
+         x="23.196512"
+         height="220.04829"
+         width="207.89272"
+         id="rect2985"
+         style="color:#000000;fill:#008bd8;fill-opacity:1;stroke:#000000;stroke-width:1.41314137;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         transform="scale(0.99988991,1.0001101)"
+         sodipodi:linespacing="125%"
+         id="text2987"
+         y="672.20941"
+         x="127.32814"
+         style="font-size:40.00437546px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="672.20941"
+           x="127.32814"
+           id="tspan2989"
+           sodipodi:role="line">Your</tspan><tspan
+           id="tspan2991"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="722.2149"
+           x="127.32814"
+           sodipodi:role="line">Code</tspan></text>
+      <rect
+         ry="32.864357"
+         y="810.88525"
+         x="23.196512"
+         height="220.04829"
+         width="207.89272"
+         id="rect2985-2"
+         style="color:#000000;fill:#008bd8;fill-opacity:1;stroke:#000000;stroke-width:1.41314137;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         transform="scale(0.99988991,1.0001101)"
+         sodipodi:linespacing="125%"
+         id="text2987-4"
+         y="880.34357"
+         x="127.32814"
+         style="font-size:40.00437546px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan2991-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="880.34357"
+           x="127.32815"
+           sodipodi:role="line">Arduino</tspan><tspan
+           id="tspan3022"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="930.34906"
+           x="127.32814"
+           sodipodi:role="line">Code</tspan><tspan
+           id="tspan3024"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="980.35449"
+           x="127.32815"
+           sodipodi:role="line">Library</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="path3049"
+         d="M 309.04761,888.32142 309.04761,913.1574 258.18719,913.1574 258.18719,928.72535 309.04761,928.72535 309.04761,953.49739 352.1767,920.9094 z"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8.66539764;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="path3049-0"
+         d="M 304.72487,653.39844 304.72487,678.23442 253.86445,678.23442 253.86445,693.80237 304.72487,693.80237 304.72487,718.57441 347.85396,685.98642 z"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8.66539764;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+    </g>
+    <rect
+       style="color:#000000;fill:#f4e20e;fill-opacity:1;stroke:#000000;stroke-width:2.15164661;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect2985-8"
+       width="233.41634"
+       height="454.35641"
+       x="367.15985"
+       y="576.26953"
+       ry="32.863998" />
+    <text
+       xml:space="preserve"
+       style="font-size:40.00437546px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="483.63251"
+       y="766.55524"
+       id="text2987-7"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99988991,1.0001101)"><tspan
+         sodipodi:role="line"
+         x="483.63251"
+         y="766.55524"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+         id="tspan2991-9">Arduino</tspan><tspan
+         sodipodi:role="line"
+         x="483.63251"
+         y="816.56073"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+         id="tspan4710">Software</tspan><tspan
+         sodipodi:role="line"
+         x="483.63251"
+         y="866.56616"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+         id="tspan4712">Tools</tspan></text>
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8.66539764;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="M 676.62726,770.85975 676.62726,795.69573 625.76684,795.69573 625.76684,811.26368 676.62726,811.26368 676.62726,836.03572 719.75635,803.44773 z"
+       id="path3049-0-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc" />
+    <g
+       id="g4857"
+       transform="translate(0,13.725227)">
+      <rect
+         ry="32.863998"
+         y="679.69836"
+         x="740.5412"
+         height="220.04829"
+         width="207.89272"
+         id="rect2985-4"
+         style="color:#000000;fill:#008bd8;fill-opacity:1;stroke:#000000;stroke-width:1.41314137;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         transform="scale(0.99988991,1.0001101)"
+         sodipodi:linespacing="125%"
+         id="text2987-1"
+         y="721.94067"
+         x="844.37177"
+         style="font-size:40.00437546px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan4788"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="721.94067"
+           x="844.37177"
+           sodipodi:role="line">Binary</tspan><tspan
+           id="tspan4792"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="771.94617"
+           x="844.37177"
+           sodipodi:role="line">File</tspan></text>
+      <text
+         transform="scale(0.99988991,1.0001101)"
+         sodipodi:linespacing="125%"
+         id="text2987-1-9"
+         y="806.03418"
+         x="844.5744"
+         style="font-size:40.00437546px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan4792-4"
+           style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="806.03418"
+           x="844.5744"
+           sodipodi:role="line">...00000100</tspan><tspan
+           id="tspan4820"
+           style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="841.03418"
+           x="844.5744"
+           sodipodi:role="line">01000110001</tspan><tspan
+           id="tspan4822"
+           style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Courier 10 Pitch;-inkscape-font-specification:Courier 10 Pitch"
+           y="876.03418"
+           x="844.5744"
+           sodipodi:role="line">11011011...</tspan></text>
+    </g>
+  </g>
+</svg>
