@@ -1,0 +1,293 @@
+<?xml version="1.0" ?><html lang="en">  	
+	  <head>    
+		    <meta charset="utf-8"/>    
+		    <title>Introduction to Arduino</title>    
+		    <link href="css/reveal.css" rel="stylesheet"/>    
+		    <link href="css/theme/standard.css" id="theme" rel="stylesheet"/>    	
+		    <link href="css/theme/custom.css" id="theme" rel="stylesheet"/>    	
+		    <!--Add support for earlier versions of Internet Explorer -->    
+		    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->    
+	    <link href="css/theme/hackspace.css" id="theme" rel="stylesheet"/>  </head>  
+	 
+	  <body>    
+		    <!-- Wrap the entire slide show in a div using the "reveal" class. -->    
+		    <div class="reveal">      
+			      <!-- Wrap all slides in a single "slides" class -->      
+			      <div class="slides">        
+				
+			        <section data-state="title_slide" id="title_slide">          
+		          <div>            
+			            <img id="banner_img" src="image/hackspace/hackspace-banner.png"/>            
+		          </div>          
+		          <h1>Introduction to Arduino</h1>          
+		          <img src="image/arduino-slides/arduino-logo-long.png"/>          		
+		          <h2>Programming and Electronics for your Projects</h2>          
+	        </section>        <section>          
+		          <h1>Welcome!</h1>          
+		          <p>            	
+			            <ul>              
+				              <li>Wifi: HSNOTTS-guest</li>              
+				              <li>Password: hackspacebiscuits</li>              
+				              <li>                This Presentation:                 <a href="http://PRESENTATIONURL">http://PRESENTATIONURL</a>              </li>              
+				              <li>                Presentation PDF:                 <a href="http://wiki.nottinghack.co.uk/wiki/Arduino101">http://wiki.nottinghack.co.uk/wiki/Arduino101</a>              </li>              
+				              <li>                Arduino website:                 <a href="http://www.arduino.cc">http://www.arduino.cc</a>              </li>              
+			            </ul>            
+		          </p>          
+	        </section>        <section>          
+		          <h1>What we'll be doing</h1>          
+		          <p>            	
+			            <ul>              
+				              <li>Let's get programming!</li>              
+				              <li>What did we just do? What is an “Arduino” anyway?</li>              
+				              <li>Serial communications (making your Arduino talk to your laptop)</li>              
+				              <li>Electronics</li>              
+				              <li>More blinking LEDs</li>              
+				              <li>Using switches</li>              
+			            </ul>            
+		          </p>          
+	        </section>        <section>          
+		          <section>            
+			            <h1>Dive In: Blink an LED</h1>            
+			            <p class="code_along">Code-Along #1</p>            
+		          </section>          
+		          <section>            
+			            <h2>Notes</h2>            
+			            <p>
+				When you first use a new programming langauge, you write a simple program to 
+				demonstrate its basic use.
+			</p>            
+			            <p>
+				On a general purpose computer, this is often a program to print &quot;Hello, world!&quot;.
+			</p>            
+			            <p>
+				The first microcontroller program anyone writes when learning a new language
+				or platform is one to blink an LED.
+			</p>            
+		          </section>          
+	        </section>        <section>          
+		          <section>            
+			            <h1>What just happened?</h1>            
+			            <p>The Arduino IDE is a text editor combined with programming tools.</p>            
+			            <img height="500px" src="image/arduino-slides/arduino-text-editor-tools.png"/>            
+		          </section>          
+		          <section>            
+			            <h2>Notes</h2>            
+			            <p>
+				The Arduino IDE is Windows, Mac and Linux compatible.
+			</p>            
+			            <p>
+				Behind the scences, it uses standard programming tools and code.
+			</p>            
+			            <p>
+				If you want to try some desktop programming, try Processing, which is very similar to Arduino.
+			</p>            
+		          </section>          
+	        </section>        <section>          
+		          <section>            
+			            <h1>What just happened?</h1>            
+			            <img height="400px" src="image/arduino-slides/arduino-compile-process.svg"/>            
+			            <p>Your code is combined with the arduino library and made into a single file.</p>            
+		          </section>          
+		          <section>            
+			            <h2>Notes</h2>            
+			            <p>              
+				There are two main steps involved here:
+				              <ul>                
+					                <li>Compiling: turning each separate code file into machine code</li>                
+					                <li>Linking: combining each machine code file into one</li>                
+				              </ul>              
+			            </p>            
+			            <p>
+				Before compiling, each file also goes through a pre-processor stage, which does
+				replacement of strings, for example if you have:
+			</p>            
+			            <p>              
+				              <span class="code">#define LED_PIN 13</span>              
+			            </p>            
+			            <p>
+				in your code, the preprocessor replaces LED_PIN with 13 everywhere it finds it. 
+			</p>            
+		          </section>          
+	        </section>        <section>          
+		          <section>            
+			            <h1>What just happened?</h1>            
+			            <img height="400px" src="image/arduino-slides/arduino-compile-process-2.svg"/>            
+			            <p>That file is sent to the microcontroller down the USB cable.</p>            
+			            <p>It stays there until re-programmed, even if power is removed!</p>            
+		          </section>          
+		          <section>            
+			            <h2>Notes</h2>            
+			            <p>
+				The program is stored in FLASH memory on the Arduino chip. This is non-volatile memory, 
+				which means it keeps its data even without power. It's normally read-only - you can only
+				change it by reprogramming the chip.
+			</p>            
+			            <p>
+				The other main type of memory is RAM. This is where your program data lives when it's running.
+				It's volatile memory, which means it loses all its data when it loses power.
+			</p>            
+			            <p>The Arduino also has EEPROM memory which is non-voltatile read/write memory. This means you can
+				store data even when power is removed! But it has a limited number of writes
+				before it becomes unusable, so you have to be careful!
+			</p>            
+		          </section>          
+	        </section>        <section>          
+		          <section>            
+			            <h1>Serial Monitor</h1>            
+			            <p class="code_along">Code-Along #2</p>            
+		          </section>          
+		          <section>            
+			            <h2>Notes</h2>            
+			            <p>
+				Serial communications are an ancient but still widely used way to communicate between
+				computers and devices.
+			</p>            
+			            <p>
+				The Arduino has a USB chip onboard that acts like a serial port, since modern PCs and laptops
+				don't tend to have them built in anymore.
+			</p>            
+			            <p>
+				Some smaller Arduino boards leave this chip out. In that case you need to buy a cable
+				with this chip inside (a USB to serial cable).
+			</p>            
+		          </section>          
+	        </section>        <section>          
+		          <section>            
+			            <h1>Variables</h1>            
+			            <p class="code_along">Code-Along #3</p>            
+		          </section>          
+		          <section>            
+			            <h2>Notes</h2>            
+			            <p>              
+				When you declare a variable, you are telling the Arduino IDE:              <br/>              
+				&quot;Give me a bit of memory and let me refer to it with this name.&quot;              <br/>              
+				For example               <span class="code">int led = 13</span>               means:              <br/>              
+				&quot;Give me a bit of memory large enough to store an integer and call it led.&quot;
+			            </p>            
+		          </section>          
+	        </section>        <section>          
+		          <section>            
+			            <h1>Variables</h1>            
+			            <p>The data your program needs to store, for example:</p>            
+			            <ul>              
+				              <li>Score in a game</li>              
+				              <li>Position of a joystick</li>              
+				              <li>Temperature read from a sensor</li>              
+				              <li>                Time - like                 <span class="code">loop_timer</span>                !              </li>              
+			            </ul>            
+		          </section>          
+		          <section>            
+			            <h2>Notes</h2>            
+			            <p>Variable can have different sizes (datatypes). Here's a table:</p>            
+			            <table>              
+				              <tr>                
+					                <th>Name</th>                
+					                <th>Size (bytes)</th>                
+					                <th>Range</th>                
+				              </tr>              
+				              <tr>                
+					                <td>char</td>                
+					                <td>1</td>                
+					                <td>Characters e.g, 'A', 'B' or -128 to 127</td>                
+				              </tr>              
+				              <tr>                
+					                <td>unsigned char</td>                
+					                <td>1</td>                
+					                <td>0 to 255</td>                
+				              </tr>              
+				              <tr>                
+					                <td>int</td>                
+					                <td>2</td>                
+					                <td>-32768 to 32767</td>                
+				              </tr>              
+				              <tr>                
+					                <td>unsigned int</td>                
+					                <td>2</td>                
+					                <td>0 to 65535</td>                
+				              </tr>              
+				              <tr>                
+					                <td>bool</td>                
+					                <td>1</td>                
+					                <td>true or false</td>                
+				              </tr>              
+				              <tr>                
+					                <td>String</td>                
+					                <td>1 per character</td>                
+					                <td>As long as you like! (in principle!)</td>                
+				              </tr>              
+			            </table>            
+		          </section>          
+	        </section>        <section>          
+		          <section>            
+			            <h1>Assignment</h1>            
+			            <p>How variables are changed.</p>            
+			            <p>              What does               <span class="code">loop_timer = loop_timer + 1;</span>               do?            </p>            
+			            <p>              It               <i>assigns</i>               a new value to               <span class="code">loop_timer</span>              .            </p>            
+			            <p>              The               <span class="code">=</span>               sign means &quot;work out the right hand side, then put the result in the left-hand side.&quot;            </p>            
+		          </section>          
+		          <section>            
+			            <h2>Notes</h2>            
+			            <p>
+				Make sure you understand how and why a variable gets changed.
+			</p>            
+			            <p>              
+				Can you explain why these lines of code DON'T make sense?
+				              <ul>                
+					                <li>                  <span class="code">loop_timer = loop_timer;</span>                </li>                
+					                <li>                  <span class="code">2 = loop_timer;</span>                </li>                
+					                <li>                  <span class="code">loop_timer + 1 = loop_timer;</span>                </li>                
+				              </ul>               
+			            </p>            
+		          </section>          
+	        </section>        <section>          
+		          <h1>Electronics</h1>          
+		          <p>Arduino is about electronics as well as programming.</p>          
+		          <p>We'll use a breadboard to connect our components.</p>          
+		          <img src="image/arduino-slides/breadboard.png"/>          
+	        </section>        <section>          
+		          <h1>Electronics</h1>          
+		          <p>Keep your breadboards nice and neat!</p>          
+		          <div class="inline_container">            
+			            <img src="image/arduino-slides/breadboard-no.jpg"/>            
+			            <strong>No!</strong>            
+		          </div>          
+		          <div class="inline_container">            
+			            <img src="image/arduino-slides/breadboard-yes.jpg"/>            
+			            <strong>Yes!</strong>            
+		          </div>          
+	        </section>        <section>          
+		          <h1>Using a breadboard</h1>          
+		          <div class="inline_container">            
+			            <p>Construct this circuit using an LED and a 330R resistor.</p>            
+			            <p>The black wire connects the short LED leg and GND.</p>            
+			            <p>The red wire connects the resistor leg and 5V.</p>            
+		          </div>          
+		          <div class="inline_container">            
+			            <img class="match" src="image/arduino-slides/simple_led.png"/>            
+		          </div>          
+	        </section>        <section>          
+		          <h1>References</h1>          
+		          <p>            Arduino Website:             <a href="http://www.arduino.cc">www.arduino.cc</a>          </p>          
+		          <p>            Breadboard images made using             <a href="http://fritzing.org">Fritzing</a>          </p>          
+		          <p>            This presentation made with             <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>          </p>          
+	        </section>        <section>          
+		          <h1>Image Credits</h1>          
+		          <p>            Breadboards:
+			            <a href="https://commons.wikimedia.org/wiki/File:Breadboard_connection_15052013.jpg">Safranek-interia.eu</a>            
+			            <a href="https://commons.wikimedia.org/wiki/File:BjornR_breadboard_01.jpg">BjornR</a>            
+		          </p>          
+	        </section>      </div>      
+		    </div>    
+
+		    <script src="lib/js/head.min.js"></script>    
+		    <script src="js/reveal.js"></script>    
+		    <script>      
+			// Required, even if empty.
+			Reveal.initialize({
+			});
+		          </script>    
+
+	  </body>  
+</html>

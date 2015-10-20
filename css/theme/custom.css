@@ -1,0 +1,10 @@
+p.code_along {
+	color: orange;
+	font-family: courier;
+	font-size: 2em;
+}
+
+span.code {
+	font-family: courier;	
+	color: blue;
+} 

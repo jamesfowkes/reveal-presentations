@@ -1,0 +1,3 @@
+folders = slides/hackspace-title, slides/arduino-intro
+title = Introduction to Arduino
+css = css/theme/hackspace.css
