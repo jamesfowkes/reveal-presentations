@@ -7,6 +7,9 @@ def make_closing_tags(dom):
 	for node in dom.getElementsByTagName("script"):
 		node.appendChild(dom.createTextNode(''))		
 
+	for node in dom.getElementsByTagName("iframe"):
+		node.appendChild(dom.createTextNode(''))		
+	
 def load_html_template():
 	dom = minidom.parse("slides/presentation-template.html")
 	return dom
