@@ -36,7 +36,7 @@
 		<section>
 			<h1>What just happened?</h1>
 			<p>The Arduino IDE is a text editor combined with programming tools.</p>
-			<img src="image/arduino-slides/arduino-text-editor-tools.png" height="500px"></img>
+			<img src="image/arduino-slides/01-arduino-text-editor-tools.png" height="500px"></img>
 		</section>
 		<section>
 			<h2>Notes</h2>
@@ -54,7 +54,7 @@
 	<section>
 		<section>
 			<h1>What just happened?</h1>
-			<img src="image/arduino-slides/arduino-compile-process.svg" height="400px"></img>
+			<img src="image/arduino-slides/02-arduino-compile-process.svg" height="400px"></img>
 			<p>Your code is combined with the arduino library and made into a single file.</p>
 		</section>
 		<section>
@@ -82,7 +82,7 @@
 	<section>
 		<section>
 			<h1>What just happened?</h1>
-			<img src="image/arduino-slides/arduino-compile-process-2.svg" height="400px"></img>
+			<img src="image/arduino-slides/03-arduino-compile-process.svg" height="400px"></img>
 			<p>That file is sent to the microcontroller down the USB cable.</p>
 			<p>It stays there until re-programmed, even if power is removed!</p>
 		</section>
@@ -216,42 +216,149 @@
 		</section>
 	</section>
 	<section>
-		<h1>Electronics</h1>
-		<p>Arduino is about electronics as well as programming.</p>
-		<p>We'll use a breadboard to connect our components.</p>
-		<img src="image/arduino-slides/breadboard.png"></img>
+		<section>
+			<h1>Electronics</h1>
+			<p>Arduino is about electronics as well as programming.</p>
+			<p>We'll use a breadboard to connect our components.</p>
+			<img src="image/arduino-slides/04-breadboard.png"></img>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>The spacing between breadboard holes is 0.1" (2.54mm).</p>
+			<p>Multiples or divisions of 0.1" are a very common spacing in electronics</p>
+		</section>
 	</section>
 
 	<section>
 		<h1>Electronics</h1>
 		<p>Keep your breadboards nice and neat!</p>
 		<div class="inline_container">
-			<img src="image/arduino-slides/breadboard-no.jpg"></img>
+			<img src="image/arduino-slides/05-breadboard-no.jpg"></img>
 			<strong>No!</strong>
 		</div>
 		<div class="inline_container">
-			<img src="image/arduino-slides/breadboard-yes.jpg"></img>
+			<img src="image/arduino-slides/06-breadboard-yes.jpg"></img>
 			<strong>Yes!</strong>
 		</div>
 	</section>
 
 	<section>
-		<h1>Using a breadboard</h1>
-		<div class="inline_container">
-			<p>Construct this circuit using an LED and a 330R resistor.</p>
-			<p>The black wire connects the short LED leg and GND.</p>
-			<p>The red wire connects the resistor leg and 5V.</p>
-		</div>
-		<div class="inline_container">
-			<img class="match" src="image/arduino-slides/simple_led.png"></img>
-		</div>
+		<section>
+			<h1>Using a breadboard</h1>
+			<div class="inline_container">
+				<p>Construct this circuit using an LED and a 330R resistor.</p>
+				<p>The black wire connects the short LED leg and GND.</p>
+				<p>The red wire connects the resistor leg and 5V.</p>
+			</div>
+			<div class="inline_container">
+				<img class="match" src="image/arduino-slides/07-simple_led.png"></img>
+			</div>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>The Arduino is just being used as a <i>power supply</i> here.</p>
+			<p>We're really just connecting the LED and resistor to USB - just like charging your phone from USB!</p>
+		</section>
 	</section>
 
 	<section>
-		<h1>References</h1>
+		<section>
+			<h1>The "water analogy"</h1>
+			<p>Voltage = Pressure &#160;&#160;&#160;&#8226;&#160;&#160;&#160; Current = Flow &#160;&#160;&#160;&#8226;&#160;&#160;&#160; Resistance = Squeezing</p>
+
+			<div class="inline_container">
+				<img src="image/arduino-slides/08-water-analogy-circuit.svg"></img>
+				<p>Voltage "pushes" current round a circuit</p>
+			</div>
+			<div class="inline_container">
+				<img src="image/arduino-slides/09-water-analogy-pipes.svg"></img>
+				<p>like pressure pushes water through pipes</p>
+			</div>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>The higher the pressure, the higher the flow for a given size of pipe.</p>
+			<p>The higher the voltage, the higher the current for a given resistance.</p>
+			<p>The relationship between volts (V), current (I) and resistance (R) is</p>
+			<h2>I = V/R</h2>
+		</section>
+	</section>
+
+	<section>
+		<section>
+			<h1>Simulation</h1>
+			<iframe width="100%" height="80%" src="http://lushprojects.com/circuitjs/circuitjs.html"></iframe>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>Simulators like this are a great way of learning and experimenting, but they're no substitute for the real thing!</p>
+		</section>
+	</section>
+	<section>
+		<section>
+			<h1>Another blinking LED</h1>
+			<div class="inline_container">
+				<p>Change your circuit as shown in the picture.</p>
+				<p>Then we'll change the code to match.</p>
+				<p class="code_along">Code-Along #4</p>
+			</div>
+			<div class="inline_container">
+				<img class="match" src="image/arduino-slides/11-blink-external-led.png"></img>
+			</div>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>Notice that we are using the bottom row of the breadboard for the circuit ground.</p>
+			<p>The top and bottom rows of the breadboard are normally used for <i>power rails</i>.</p>
+		</section>
+	</section>
+
+	<section>
+		<section>	
+			<h1>Reading Switches</h1>
+			<div class="inline_container">
+				<p>There are loads of different types of switch.</p>
+				<p>We'll use a <i>tactile switch</i> because they fit in breadboards.</p>
+				<p>Pay close attention to which way round the switch is!</p>
+			</div>
+			<div class="inline_container">
+				<img class="match" src="image/arduino-slides/12-tactile-switch.png"></img>
+			</div>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>If you are using switches in your projects, it's important to know about "switch bouncing".</p>
+			<p>This is where a switch doesn't make contact cleanly when it's pressed or flipped.</p>
+			<p>It can cause software to think a switch has been pressed many times when it's only been pressed once.</p>
+			<p>Try reading <a href="https://www.arduino.cc/en/Tutorial/Debounce">this tutorial</a> to find out more.</p>
+		</section>
+	</section>
+
+	<section>
+		<section>
+			<h1>Digital In, Digital Out</h1>
+			<div class="inline_container">
+				<p>Change your circuit as shown in the picture.</p>
+				<p>Then we'll change the code to match.</p>
+				<p class="code_along">Code-Along #5</p>
+			</div>
+			<div class="inline_container">
+				<img class="match" src="image/arduino-slides/13-switch-and-led.png"></img>
+			</div>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>Notice that we are using the bottom row of the breadboard for the circuit ground.</p>
+			<p>The top and bottom rows of the breadboard are normally used for <i>power rails</i>.</p>
+		</section>
+	</section>
+
+	<section>
+		<h1>References and Acknowledgements</h1>
 		<p>Arduino Website: <a href="http://www.arduino.cc">www.arduino.cc</a></p>
 		<p>Breadboard images made using <a href="http://fritzing.org">Fritzing</a></p>
 		<p>This presentation made with <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a></p>
+		<p>Simulation software by <a href="www.falstad.com/circuit">Paul Falstad</a> and <a href="http://lushprojects.com/circuitjs/circuitjs.html?simulations=slackcct/01-led-sim.txt">Iain Sharp</a></p>
 	</section>
 
 	<section>
@@ -260,5 +367,15 @@
 			<a href="https://commons.wikimedia.org/wiki/File:Breadboard_connection_15052013.jpg">Safranek-interia.eu</a>
 			<a href="https://commons.wikimedia.org/wiki/File:BjornR_breadboard_01.jpg">BjornR</a>
 		</p>
+		<p>
+			Tactile Switches:
+			<a href="https://commons.wikimedia.org/wiki/File:BUTA-06-X-STAN-01.jpg">oomlout</a>
+		</p>
+	</section>
+
+	<section>
+		<h1>Licensing and Re-Use</h1>
+		<p>This presentation is available for re-use and distribution under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license</a></p>
+		<p>CircuitJS is licensed under GPLv2 (see <a href="https://github.com/sharpie7/circuitjs1">https://github.com/sharpie7/circuitjs1</a></p>
 	</section>
 </sections>
