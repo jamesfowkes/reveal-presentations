@@ -336,7 +336,6 @@
 
 	<section>
 		<section>
-			<h1>Digital In, Digital Out</h1>
 			<div class="inline_container">
 				<p>Change your circuit as shown in the picture.</p>
 				<p>Then we'll change the code to match.</p>
@@ -354,11 +353,68 @@
 	</section>
 
 	<section>
+		<section>
+			<div class="inline_container">
+				<h1>Analog Input</h1>
+				<p>A lot of the time we need to read voltages <i>between</i> 5V and 0V.</p>
+				<p>To do this, we use <i>analog input</i>. It gives you a number <i>representing</i> the voltage on a pin.</p>
+			</div>
+
+			<div class="inline_container">
+				<span class="code">int value = analogRead(pin);</span>
+				<p>5V &#10140; value = 1023</p>
+				<p>2.5V &#10140; value = 512</p>
+				<p>0V &#10140; value = 0</p>
+			</div>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>The Arduino Uno has 6 analog inputs. You can also use these as normal digital outputs</p>
+		</section>
+	</section>
+
+	<section>
+		<section>
+			<div class="inline_container">
+				<p>Change your circuit as shown in the picture.</p>
+				<p>Then we'll change the code to match.</p>
+				<p class="code_along">Code-Along #6</p>
+			</div>
+			<div class="inline_container">
+				<img class="match" src="image/arduino-slides/14-pot-and-led.png"></img>
+			</div>
+		</section>
+		<section>
+			<h2>Notes</h2>
+			<p>You'll damage the Arduino if you use voltages above 5V or below 0V.</p>
+			<p>You'll need to use some conversion circuitry if you want to read voltages outside the range.</p>
+		</section>
+	</section>
+
+	<section>
+		<section>
+			<div>
+				<h1>Analog Output</h1>
+				<p>Sometimes don't want to turn something just on or off.</p>
+				<p>We'd like to have control of <i>how much</i> something is on - between 0% and 100%.</p>
+				<p>We use <i>analogOutput</i> to do this.</p>
+			</div>
+		</section>
+	</section>
+
+	<section>
+		<div>
+			<h1>Pulse Width Modulation</h1>
+			<img src="image/arduino-slides/13-pwm.png"></img>
+		</div>
+	</section>
+	
+	<section>
 		<h1>References and Acknowledgements</h1>
 		<p>Arduino Website: <a href="http://www.arduino.cc">www.arduino.cc</a></p>
 		<p>Breadboard images made using <a href="http://fritzing.org">Fritzing</a></p>
 		<p>This presentation made with <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a></p>
-		<p>Simulation software by <a href="www.falstad.com/circuit">Paul Falstad</a> and <a href="http://lushprojects.com/circuitjs/circuitjs.html?simulations=slackcct/01-led-sim.txt">Iain Sharp</a></p>
+		<p>Simulation software by <a href="www.falstad.com">Paul Falstad</a> and <a href="http://lushprojects.com/circuitjs/circuitjs.html">Iain Sharp</a></p>
 	</section>
 
 	<section>
