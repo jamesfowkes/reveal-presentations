@@ -1,3 +1,7 @@
+[Global Config]
 folders = slides/hackspace-title, slides/arduino-intro
-title = Introduction to Arduino
 css = css/theme/hackspace.css
+
+[Template]
+title = Introduction to Arduino
+presentation_url = nottinghack.org.uk/introduction-to-arduino.html

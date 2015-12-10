@@ -1,7 +1,10 @@
 from xml.dom import minidom
-from config_reader import Config
+import configparser
+
+from jinja2 import Template
 
 import args
+import logging
 
 def make_closing_tags(dom):
 	for node in dom.getElementsByTagName("script"):
@@ -24,7 +27,7 @@ def get_slides_div(dom):
 			pass
 	
 def process_dom(dom, config):
-	if 'banner_image' in config:
+	if 'banner_image' in config['Global Config']:
 		for img_node in dom.getElementsByTagName("img"):
 			if img_node.getAttribute("id") == "banner_img":
 				img_node.setAttribute("src", config.banner_image)
@@ -44,14 +47,6 @@ def add_to_template(slide_folder, original_dom, config):
 		if type(section) == minidom.Element:
 			slides_div.appendChild(section)
 
-def replace_title(dom, new_title):
-	old_title_node = dom.getElementsByTagName('title').item(0)
-	parent = old_title_node.parentNode
-	new_title_node = dom.createElement('title')
-	new_title_text_node = dom.createTextNode(new_title)
-	new_title_node.appendChild(new_title_text_node)
-	parent.replaceChild(new_title_node, old_title_node)
-
 def add_css(dom, css):
 
 	if type(css) != list:
@@ -65,28 +60,64 @@ def add_css(dom, css):
 		css_node.setAttribute("rel", "stylesheet")
 		head_node.appendChild(css_node)
 
+def get_output_filename(config):
+	title = config['Template']['title']
+	title = title.lower()
+	title = title.replace(" ", "-")
+	return title + ".html"
+
+def get_folders(config):
+	folders = [folder.strip() for folder in config.split(",")]
+	return folders
+
+def get_config(config_file):
+
+	template_config = {}
+
+	config = configparser.ConfigParser()
+	config.read(config_file)
+
+	logging.info("Global config:")
+	for k, v in config['Global Config'].items():
+		logging.info("%s = %s", k, v)
+
+	logging.info("Template config:")
+	for k, v in config['Template'].items():
+		template_config[k] = v
+		logging.info("%s = %s", k, v)
+
+	return (config, template_config)
+
+def add_slides(original_dom, config):
+	for slide_folder in get_folders(config['Global Config']['folders']):
+		add_to_template(slide_folder, original_dom, config)
+
 def run():
 
 	_args = args.get_args()
 
-	config = Config.get_from_stream( open(_args.config, 'r'))
-	
+	(config, template_config) = get_config(_args.config)
+
 	original_dom = load_html_template()
 
-	replace_title(original_dom, config.title)
-	add_css(original_dom, config.css)
+	add_css(original_dom, config['Global Config']['css'])
 
-	for slide_folder in config.folders:
-		add_to_template(slide_folder, original_dom, config)
-
+	add_slides(original_dom, config)
+	
 	imp = minidom.getDOMImplementation('')
 	dt= imp.createDocumentType('html', 
 		'-//W3C//DTD XHTML 1.0 Strict//EN', 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd')
 
 	make_closing_tags(original_dom)
 
-	with open(config.output_filename(), 'w') as f:
-		original_dom.writexml(f, "", "  ")
+	xml = original_dom.toxml()
+
+	template = Template(xml)
+
+	with open(get_output_filename(config), 'w') as f:
+		f.write(template.render(conf=template_config))
 
 if __name__ == "__main__":
+
+	logging.basicConfig(level=logging.INFO)
 	run()

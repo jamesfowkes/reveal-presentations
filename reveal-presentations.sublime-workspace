@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"template",
+				"template_config"
+			],
+			[
+				"te",
+				"template_config"
+			],
+			[
+				"get",
+				"get_config"
+			],
+			[
+				"fol",
+				"folders"
+			],
+			[
 				"cs",
 				"css_node"
 			],
@@ -14,10 +30,6 @@
 			[
 				"css",
 				"css_file"
-			],
-			[
-				"get",
-				"get_logger"
 			],
 			[
 				"read",
@@ -219,22 +231,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "slides/arduino-intro/slides.html",
-			"settings":
-			{
-				"buffer_size": 14394,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "make-presentation.py",
-			"settings":
-			{
-				"buffer_size": 2521,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -285,20 +281,24 @@
 	},
 	"expanded_folders":
 	[
-		"/home/james/Github/reveal-presentations"
+		"/home/james/Github/reveal-presentations",
+		"/home/james/Github/reveal-presentations/presentations",
+		"/home/james/Github/reveal-presentations/slides",
+		"/home/james/Github/reveal-presentations/slides/arduino-intro",
+		"/home/james/Github/reveal-presentations/slides/hackspace-title"
 	],
 	"file_history":
 	[
+		"/home/james/Github/reveal-presentations/slides/arduino-intro/slides.html",
 		"/home/james/Github/reveal-presentations/slides/hackspace-title/slides.html",
+		"/home/james/Github/reveal-presentations/presentations/hackspace-arduino-intro",
+		"/home/james/Github/reveal-presentations/make-presentation.py",
+		"/home/james/Github/reveal-presentations/slides/presentation-template.html",
+		"/home/james/Github/reveal-presentations/config_reader.py",
 		"/home/james/Github/reveal-presentations/introduction_to_arduino.html",
 		"/home/james/Github/reveal-presentations/css/theme/hackspace.css",
 		"/home/james/Github/reveal-presentations/css/theme/standard.css",
 		"/home/james/Github/reveal-presentations/css/reveal.css",
-		"/home/james/Github/reveal-presentations/slides/presentation-template.html",
-		"/home/james/Github/reveal-presentations/presentations/hackspace-arduino-intro",
-		"/home/james/Github/reveal-presentations/make-presentation.py",
-		"/home/james/Github/reveal-presentations/slides/arduino-intro/slides.html",
-		"/home/james/Github/reveal-presentations/config_reader.py",
 		"/home/james/Github/reveal-presentations/css/theme/custom.css",
 		"/home/james/Github/reveal-presentations/css/theme/black.css",
 		"/home/james/Github/reveal-presentations/args.py",
@@ -424,9 +424,12 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"",
+			"*.html",
+			"",
 			"*.css",
 			"-env/",
 			"-env\\*",
@@ -439,6 +442,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"-\"",
+			"\"_\"",
+			"{{",
+			"title",
+			"css",
+			"replace_title",
 			"&#",
 			"img",
 			".png",
@@ -560,13 +569,7 @@
 			"setRTCFn",
 			"s_callbacks",
 			"1]",
-			"success",
-			"setRTCFromMessage",
-			"uint8_t ",
-			");",
-			"getTimedAction_callback",
-			"reset_callback",
-			";"
+			"success"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -585,67 +588,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "slides/arduino-intro/slides.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14394,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13066,
-								13066
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6165.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "make-presentation.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2521,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								289,
-								289
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
