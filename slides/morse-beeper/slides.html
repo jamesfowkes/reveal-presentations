@@ -1,0 +1,52 @@
+<sections>
+	<section data-state="title_slide" id="title_slide">
+		<div>
+			<img id="banner_img" src="{{conf['banner_image']}}"></img>
+		</div>
+		<h1>Mini-Project</h1>
+		<h2>Morse Code Beeper</h2>
+		<img src="image/morse-beeper/morse-beeper-01.png"></img>
+	</section>
+
+	<section>
+		<h1>Introduction</h1>
+		<p>
+		You've decided to learn Morse Code! To help you, you're going to build a device that tests your morse code knowledge.
+		</p>
+		<p>
+		The device will play dots-and-dashes at you and you'll then guess the letter by typing it in over the serial port.
+		</p>
+	</section>
+
+	<section>
+		<h1>Basics</h1>
+		<p>
+			It's always helpful to break a project down into small tasks. Here are the programming tasks that you'll be doing:
+			<ol>
+				<li>Writing to code to play the right Morse code tones for a letter through a speaker</li>
+				<li>Writing the code to pick a random letter from A to Z and play it</li>
+				<li>Asking the user for their guess at which letter it was</li>
+				<li>Telling the user if they got it right or not</li>
+			</ol>
+		</p>
+	</section>
+
+	<section>
+		<h1>Setting up the sketch</h1>
+		<p>
+			To help you, we've written a file that has all the letter A-Z in morse code. 
+			<ul>
+				<li>First, start a new sketch and save it as morse_code_beeper</li>
+				<li>Download <a href="{{conf['content_morse_header']}}">this file</a> and save it into your sketch folder.</li>
+				<li>Restart the Arduino IDE and open the sketch again. You should see the downloaded file in another tab inside the IDE window</li>
+				<li>Click the tab to read the file. Each letter has a list of variables (called an <i>array</i>) that holds DOT or DASH.</li>
+				<li>We put a zero at the end of the array to mean "no more sounds"</li>
+			</ul>
+		</p>
+	</section>
+	<section>
+		<h1>Playing Tones</h1>
+		<p>
+		You'll need to write a new function to play the tone for a letter. 
+	</section>
+</sections>

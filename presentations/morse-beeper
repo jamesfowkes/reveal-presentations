@@ -1,0 +1,8 @@
+[Global Config]
+folders = slides/morse-beeper
+css = css/theme/hackspace.css
+
+[Template]
+title = Morse Beeper
+presentation_url = nottinghack.org.uk/arduino-workshop/morse-beeper/slides/morse-beeper.html
+banner_image = ./image/hackspace/hackspace-banner.png

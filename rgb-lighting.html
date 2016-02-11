@@ -1,0 +1,99 @@
+<?xml version="1.0" ?><html lang="en">	
+	<head>
+		<meta charset="utf-8"/>
+		<title>rgb-lighting</title>
+		<link href="css/reveal.css" rel="stylesheet"/>
+		<link href="css/theme/standard.css" id="theme" rel="stylesheet"/>	
+		<link href="css/theme/custom.css" id="theme" rel="stylesheet"/>	
+		<!--Add support for earlier versions of Internet Explorer -->
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	<link href="css/theme/hackspace.css" id="theme" rel="stylesheet"/></head>
+	 
+	<body>
+		<!-- Wrap the entire slide show in a div using the "reveal" class. -->
+		<div class="reveal">
+			<!-- Wrap all slides in a single "slides" class -->
+			<div class="slides">
+				
+			<section data-state="title_slide" id="title_slide">
+		<div>
+			<img id="banner_img" src="./image/hackspace/hackspace-banner.png"/>
+		</div>
+		<h1>Mini-Project</h1>
+		<h2>Radio Controlled RGB Lighting</h2>
+		<img src="image/rgb-lighting/rgb-lighting-01.png"/>
+	</section><section>
+		<h1>Introduction</h1>
+		<p>
+		You will be programming an Arduino called the &quot;Nano&quot;. This is an Arduino board with the same microcontroller chip as the Uno you have been using, but on a smaller board. This makes it easier to fit into small projects.
+		</p>
+		<p>
+		You'll use three potentiometers to control the R, G and B levels of a radio-controlled light. Your Arduino will read the light levels, then send them over a radio link to another Arduino controlling the light.
+		</p>
+	</section><section>
+		<h1>Basics</h1>
+		<p>
+			Here are the programming tasks that you'll be doing:
+			<ol>
+				<li>Writing the code to read the R, G, and B controls</li>
+				<li>Downloading and installing the radio software library</li>
+				<li>Writing the code to send the R, G and B levels over the radio link</li>
+			</ol>
+		</p>
+	</section><section>
+		<h1>Setting up the sketch</h1>
+		<p>
+			<ul>
+				<li>Start a new Arduino sketch</li>
+				<li>At the top of the sketch, use #define to create three pin numbers. RED_PIN should be A0, BLUE_PIN should be A1 and GREEN_PIN should be A2.</li>
+				<li>In the <i>setup</i> function, use <i>pinMode</i> to make these pins OUTPUTs.</li>
+			</ul>
+		</p>
+	</section><section>
+		<h1>Reading the controls</h1>
+		<p>
+			<ul>
+				<li>In the loop, create three new variables: red, green and blue.</li>
+				<li>They should have the <i>int</i> datatype</li>
+				<li>Use <i>analogRead</i> to set red to the value of the RED_PIN pin.</li>
+				<li>Do the same for green and blue.</li>
+			</ul>
+		</p>
+	</section><section>
+		<h1>Testing the code</h1>
+		<p>
+			Let's test what you've done so far and make sure we're reading the values correctly.
+			<li>Add the Serial.begin(9600) line to your <i>setup</i> function.</li>
+			<li>Use <i>Serial.print</i> and <i>Serial.println</i> to send the red, green and blue values back to the serial monitor</li>
+			<li>Turn each of the potentiometers. The numbers for each colour should decrease to 0 as you turn them anti-clockwise, and increase to 1023 as you turn them clockwise.</li> 
+		</p>
+	</section><section>
+		<h1>Radio Software</h1>
+		<p>
+			There is a small, cheap radio transmitter inside your box, and a matching receiver inside the RGB light.
+		</p>
+		<p>
+			The Arduino IDE doesn't come with software for this, so you'll need to install it.
+		</p>
+		<p>
+			Download <a href="nottinghack.org.uk/arduino-workshop/rgb-lighting/content/radiohead.zip">this ZIP file.</a>
+		</p>
+		<p>
+			In the Arduino IDE, go to Sketch... Include Library... Add .ZIP Library. Select the ZIP file you just downloaded. You can now use the radio software in your sketch.
+		</p>
+	</section></div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="js/mouseclick.js"></script>
+		<script>
+			// Required, even if empty.
+			Reveal.initialize({
+			});
+		</script>
+
+	</body>
+</html>

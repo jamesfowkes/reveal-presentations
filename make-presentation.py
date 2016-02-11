@@ -1,10 +1,18 @@
+""" 
+Usage:
+	make-presentation.py <config_filename>
+
+
+"""
+
+
+import docopt
+import logging
+
 from xml.dom import minidom
 import configparser
 
 from jinja2 import Template
-
-import args
-import logging
 
 def make_closing_tags(dom):
 	for node in dom.getElementsByTagName("script"):
@@ -25,24 +33,24 @@ def get_slides_div(dom):
 				return div
 		except:
 			pass
+
+def get_slides_dom(slide_folder):
 	
-def process_dom(dom, config):
-	if 'banner_image' in config['Global Config']:
-		for img_node in dom.getElementsByTagName("img"):
-			if img_node.getAttribute("id") == "banner_img":
-				img_node.setAttribute("src", config.banner_image)
+	filepath = slide_folder+"/slides.html"
+	try:
+		dom = minidom.parse(filepath)
+	except Exception as e:
+		print("Error when parsing {}: {}".format(filepath, e))
+		dom = None
+
+	return dom
 
 def add_to_template(slide_folder, original_dom, config):
-	try:
-		dom = minidom.parse(slide_folder+"/slides.html")
-		process_dom(dom, config)
-	except Exception as e:
-		print("Error when parsing {}: {}".format(slide_folder, e))
-		return
 		
+	slides_dom = get_slides_dom(slide_folder)
 	slides_div = get_slides_div(original_dom)
 
-	sections = dom.getElementsByTagName("sections")[0]
+	sections = slides_dom.getElementsByTagName("sections")[0]
 	for section in sections.childNodes:
 		if type(section) == minidom.Element:
 			slides_div.appendChild(section)
@@ -90,13 +98,14 @@ def get_config(config_file):
 
 def add_slides(original_dom, config):
 	for slide_folder in get_folders(config['Global Config']['folders']):
+		logging.info("Adding slides from {}".format(slide_folder))
 		add_to_template(slide_folder, original_dom, config)
 
 def run():
 
-	_args = args.get_args()
+	args = docopt.docopt(__doc__)
 
-	(config, template_config) = get_config(_args.config)
+	(config, template_config) = get_config(args["<config_filename>"])
 
 	original_dom = load_html_template()
 

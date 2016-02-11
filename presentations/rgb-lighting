@@ -1,0 +1,10 @@
+[Global Config]
+folders = slides/rgb-lighting
+css = css/theme/hackspace.css
+
+[Template]
+title = rgb-lighting
+presentation_url = nottinghack.org.uk/arduino-workshop/rgb-lighting/slides/rgb-lighting.html
+banner_image = ./image/hackspace/hackspace-banner.png
+content_radiohead_zip = nottinghack.org.uk/arduino-workshop/rgb-lighting/content/radiohead.zip
+  

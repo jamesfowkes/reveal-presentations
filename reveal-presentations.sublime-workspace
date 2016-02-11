@@ -4,16 +4,24 @@
 		"selected_items":
 		[
 			[
+				"slide",
+				"slides_dom"
+			],
+			[
+				"sli",
+				"slide_folder"
+			],
+			[
+				"get",
+				"get_slides_dom"
+			],
+			[
 				"template",
 				"template_config"
 			],
 			[
 				"te",
 				"template_config"
-			],
-			[
-				"get",
-				"get_config"
 			],
 			[
 				"fol",
@@ -46,14 +54,6 @@
 			[
 				"create",
 				"createTextNode"
-			],
-			[
-				"slide",
-				"slide_node"
-			],
-			[
-				"sli",
-				"slide_nodes"
 			],
 			[
 				"old",
@@ -231,6 +231,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "slides/morse-beeper/slides.html",
+			"settings":
+			{
+				"buffer_size": 1900,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -285,15 +293,22 @@
 		"/home/james/Github/reveal-presentations/presentations",
 		"/home/james/Github/reveal-presentations/slides",
 		"/home/james/Github/reveal-presentations/slides/arduino-intro",
-		"/home/james/Github/reveal-presentations/slides/hackspace-title"
+		"/home/james/Github/reveal-presentations/slides/hackspace-title",
+		"/home/james/Github/reveal-presentations/slides/rgb-lighting"
 	],
 	"file_history":
 	[
-		"/home/james/Github/reveal-presentations/slides/arduino-intro/slides.html",
-		"/home/james/Github/reveal-presentations/slides/hackspace-title/slides.html",
-		"/home/james/Github/reveal-presentations/presentations/hackspace-arduino-intro",
 		"/home/james/Github/reveal-presentations/make-presentation.py",
+		"/home/james/Github/reveal-presentations/slides/rgb-lighting/slides.html",
+		"/home/james/Github/reveal-presentations/presentations/morse-beeper",
+		"/home/james/Github/reveal-presentations/presentations/rgb-lighting",
+		"/home/james/Github/reveal-presentations/presentations/hackspace-arduino-intro",
+		"/home/james/Github/reveal-presentations/slides/hackspace-title/slides.html",
+		"/home/james/Github/reveal-presentations/slides/arduino-intro/slides.html",
 		"/home/james/Github/reveal-presentations/slides/presentation-template.html",
+		"/home/james/Github/reveal-presentations/slides/rgb-panel/slides.html",
+		"/home/james/Github/reveal-presentations/introduction-to-arduino.html",
+		"/home/james/Github/reveal-presentations/args.py",
 		"/home/james/Github/reveal-presentations/config_reader.py",
 		"/home/james/Github/reveal-presentations/introduction_to_arduino.html",
 		"/home/james/Github/reveal-presentations/css/theme/hackspace.css",
@@ -301,7 +316,6 @@
 		"/home/james/Github/reveal-presentations/css/reveal.css",
 		"/home/james/Github/reveal-presentations/css/theme/custom.css",
 		"/home/james/Github/reveal-presentations/css/theme/black.css",
-		"/home/james/Github/reveal-presentations/args.py",
 		"/home/james/Github/reveal-presentations/master.html",
 		"/home/james/Github/reveal-presentations/js/reveal.js",
 		"/home/james/Github/svg-path-randomiser/randomiser.py",
@@ -411,12 +425,7 @@
 		"/C/GitHub/DataLogger/libraries/DLUtility/Example/LinkItOne.Readline/LinkItOne.Readline.ino",
 		"/C/GitHub/DataLogger/libraries/DLUtility/Test/DLUtility.Readline.Test.cpp",
 		"/C/GitHub/DataLogger/libraries/DLSettings/Example/Command Line Example/DLSettings.Reader.Example.cpp",
-		"/C/GitHub/DataLogger/libraries/DLSettings/DLSettings.Reader.cpp",
-		"/C/GitHub/DataLogger/libraries/DLSettings/Example/Command Line Example/makefile",
-		"/C/GitHub/DataLogger/libraries/DLSettings/DLSettings.cpp",
-		"/C/GitHub/DataLogger/libraries/DLSettings/DLSettings.h",
-		"/C/GitHub/DataLogger/libraries/DLSettings/Example/Command Line Example/datalogger.settings",
-		"/C/GitHub/DataLogger/libraries/DLSettings/datalogger.settings"
+		"/C/GitHub/DataLogger/libraries/DLSettings/DLSettings.Reader.cpp"
 	],
 	"find":
 	{
@@ -427,6 +436,9 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"-plugin/",
+			"-/plugin",
+			"-plugin",
 			"",
 			"*.html",
 			"",
@@ -442,6 +454,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rgb-lighting",
+			"morse",
+			"rgb-lighting",
+			"nottinghack.org.uk",
+			"ol",
+			"o",
+			"panel",
+			"presentation_url",
+			"banner_img",
+			"get_slides_div",
+			"make_closing_tags",
+			"	make_closing_tags(original_dom)\n",
+			"template",
+			"Template",
+			"jinja",
+			"get_config",
+			"argparse",
 			"\"-\"",
 			"\"_\"",
 			"{{",
@@ -552,24 +581,7 @@
 			"ClrTimedAction_callback",
 			"clrTimedAction_callback",
 			"setRTC_callback",
-			"s_test_object",
-			"setRTC_callback",
-			"SetRTCMessageTest",
-			"s_",
-			"callback_flags",
-			"s_callback_flags",
-			"static",
-			"_messageHandler",
-			"_callbacks",
-			"_messageHandler",
-			"s_messageHandler",
-			"SetRTCMessageTest",
-			">>>>",
-			"test_setRTCMessage",
-			"setRTCFn",
-			"s_callbacks",
-			"1]",
-			"success"
+			"s_test_object"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -588,14 +600,44 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "slides/morse-beeper/slides.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1875,
+								1875
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -642,6 +684,10 @@
 		"selected_items":
 		[
 			[
+				"slides",
+				"slides/morse-beeper/slides.html"
+			],
+			[
 				"hack",
 				"css/theme/hackspace.css"
 			],
@@ -660,10 +706,6 @@
 			[
 				"stan",
 				"css/theme/standard.css"
-			],
-			[
-				"slides",
-				"slides/hackspace-title/slides.html"
 			],
 			[
 				"slide",
