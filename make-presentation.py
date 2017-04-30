@@ -14,6 +14,17 @@ import configparser
 
 from jinja2 import Template
 
+
+def external_links_config_processor(v):
+	parts = [part.strip() for part in v.split(", ")]
+	titles = parts[0::2]
+	urls = parts[1::2]
+	return [{"title":title, "url": url} for title, url in zip(titles, urls)]
+
+template_config_processors = {
+	"external_links": external_links_config_processor
+}
+
 def make_closing_tags(dom):
 	for node in dom.getElementsByTagName("script"):
 		node.appendChild(dom.createTextNode(''))		
@@ -91,8 +102,13 @@ def get_config(config_file):
 
 	logging.info("Template config:")
 	for k, v in config['Template'].items():
-		template_config[k] = v
-		logging.info("%s = %s", k, v)
+		try:
+			template_config[k] = template_config_processors[k](v)
+			logging.info("%s = %s (special processing)", k, template_config[k])
+		except KeyError:
+			logging.info("%s = %s", k, v)
+			template_config[k] = v
+
 
 	return (config, template_config)
 
