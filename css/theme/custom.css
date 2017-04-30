@@ -5,6 +5,17 @@ p.code_along {
 }
 
 span.code {
-	font-family: courier;	
-	color: blue;
-} 
+	font-family: "Courier New", courier, monospace;	
+}
+
+span.blue {
+	color: LightSkyBlue;
+}
+
+span.green {
+	color: OliveDrab;
+}
+
+span.orange {
+	color: OrangeRed;
+}
