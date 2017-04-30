@@ -26,43 +26,63 @@
 				<li>Writing the code to read the R, G, and B controls</li>
 				<li>Downloading and installing the radio software library</li>
 				<li>Writing the code to send the R, G and B levels over the radio link</li>
+				<li>Writing the code to receive the R, G and B levels</li>
+				<li>Writing the code to control the RGB light</li>
 			</ol>
 		</p>
 	</section>
 
 	<section>
-		<h1>Setting up the sketch</h1>
+		<h1>Transmitter: Setting up the sketch</h1>
 		<p>
 			<ul>
 				<li>Start a new Arduino sketch</li>
-				<li>At the top of the sketch, use #define to create three pin numbers. RED_PIN should be A0, BLUE_PIN should be A1 and GREEN_PIN should be A2.</li>
-				<li>In the <i>setup</i> function, use <i>pinMode</i> to make these pins OUTPUTs.</li>
+				<li>At the top of the sketch, use <span class="code green">#define</span> to create three pin numbers. RED_PIN should be A0, BLUE_PIN should be A1 and GREEN_PIN should be A2.</li>
+				<li>In the <span class="code green">setup</span> function, use <span class="code orange">pinMode</span> to make these pins <span class="code blue">INPUTs.</span></li>
 			</ul>
 		</p>
 	</section>
 
 	<section>
-		<h1>Reading the controls</h1>
+		<h1>Transmitter: Reading the controls</h1>
 		<p>
 			<ul>
-				<li>In the loop, create three new variables: red, green and blue.</li>
-				<li>They should have the <i>int</i> datatype</li>
-				<li>Use <i>analogRead</i> to set red to the value of the RED_PIN pin.</li>
+				<li>In the <span class="code green">loop</span>, create three new variables: red, green and blue.</li>
+				<li>They should have the <span class="code blue">int</span> datatype</li>
+				<li>Use <span class="code orange">analogRead</span> to set red to the value of the RED_PIN pin.</li>
 				<li>Do the same for green and blue.</li>
 			</ul>
 		</p>
 	</section>
 
 	<section>
-		<h1>Testing the code</h1>
+		<h1>Transmitter: Reading the controls</h1>
 		<p>
-			Let's test what you've done so far and make sure we're reading the values correctly.
-			<li>Add the Serial.begin(9600) line to your <i>setup</i> function.</li>
-			<li>Use <i>Serial.print</i> and <i>Serial.println</i> to send the red, green and blue values back to the serial monitor</li>
-			<li>Turn each of the potentiometers. The numbers for each colour should decrease to 0 as you turn them anti-clockwise, and increase to 1023 as you turn them clockwise.</li> 
+			To start with, let's just read the controls to the serial port and make sure the numbers look good.
+		</p>
+		<p>
+			<ul>
+				<li>Add the <span class="code orange">Serial.begin</span><span class="code">(9600)</span> line to 	your <span class="code green">setup</span> function.</li>
+				<li>Use <span class="code orange">Serial.print</span> and <span class="code orange">Serial.println</span> to send the red, green and blue values back to the serial monitor</li>
+				<li>Add a 500ms <span class="code orange">delay</span> to your <span class="code green">loop</span>.</li>
+			</ul>
 		</p>
 	</section>
 
+	<section>
+		<h1>Transmitter: Testing the code</h1>
+		<p>
+			Now you're almost ready to upload your code. First you need to tell the IDE that you're using an Arduino Nano and select the serial port:
+		</p>
+		<ul>
+			<li>Click Tools...Board and select "Arduino Nano"</li>
+			<li>Plug in the transmitter</li>
+			<li>Click Tools...Port and select the new serial port</li>
+			<li>Upload your code and open the serial monitor</li>
+			<li>Turn each of the potentiometers. The numbers for each colour should decrease to 0 as you turn them anti-clockwise, and increase to 1023 as you turn them clockwise.</li> 
+		</ul>
+
+	</section>
 	<section>
 		<h1>Radio Software</h1>
 		<p>
@@ -77,5 +97,20 @@
 		<p>
 			In the Arduino IDE, go to Sketch... Include Library... Add .ZIP Library. Select the ZIP file you just downloaded. You can now use the radio software in your sketch.
 		</p>
+	</section>
+
+	<section>
+		<h1>Radio Software</h1>
+
+		<p>
+			We're using very cheap radios and very simple software. Because we're just sending controlling the colour of a light, it doesn't matter if a transmission gets "lost" - the next transmission will probably get through.
+		</p>
+		<p>
+			There's no error checking at all - if the transmitter or receiver turns off or goes out of range, it will just stop working.  
+		</p>
+		<p>
+			If your project needs a more "robust" radio solution, have a search for "arduino radio" and see what you find. Try the RFM69 modules for low power radio, or the very popular ESP8266 for WiFi.
+		</p>
+
 	</section>
 </sections>
