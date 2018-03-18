@@ -61,10 +61,15 @@ def add_to_template(slide_folder, original_dom, config):
 	slides_dom = get_slides_dom(slide_folder)
 	slides_div = get_slides_div(original_dom)
 
+	slide_count = 0
+
 	sections = slides_dom.getElementsByTagName("sections")[0]
 	for section in sections.childNodes:
 		if type(section) == minidom.Element:
 			slides_div.appendChild(section)
+			slide_count += 1
+
+	return slide_count
 
 def add_css(dom, css):
 
@@ -113,9 +118,12 @@ def get_config(config_file):
 	return (config, template_config)
 
 def add_slides(original_dom, config):
+	slide_count = 0
 	for slide_folder in get_folders(config['Global Config']['folders']):
 		logging.info("Adding slides from {}".format(slide_folder))
-		add_to_template(slide_folder, original_dom, config)
+		slide_count += add_to_template(slide_folder, original_dom, config)
+
+	return slide_count
 
 def run():
 
@@ -127,7 +135,7 @@ def run():
 
 	add_css(original_dom, config['Global Config']['css'])
 
-	add_slides(original_dom, config)
+	nslides = add_slides(original_dom, config) 
 	
 	imp = minidom.getDOMImplementation('')
 	dt= imp.createDocumentType('html', 
@@ -139,8 +147,12 @@ def run():
 
 	template = Template(xml)
 
+	presentation_data = {
+		"number_of_slides": nslides
+	}
+
 	with open(get_output_filename(config), 'w') as f:
-		f.write(template.render(conf=template_config))
+		f.write(template.render(conf=template_config, presentation_data=presentation_data))
 
 if __name__ == "__main__":
 
